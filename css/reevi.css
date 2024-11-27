@@ -199,3 +199,7 @@ footer .nav-link {
         margin-bottom: 20px;
     }
 }
+
+.winner_a:hover{
+    color: #e10019;
+}
