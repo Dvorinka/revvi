@@ -204,6 +204,72 @@ footer .nav-link {
     color: #e10019;
 }
 
+/* Video Container Styles */
+.video-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.video-container:hover video {
+    transform: scale(1.02);
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.play-button i {
+    color: #2E3844;
+    font-size: 30px;
+    margin-left: 5px;
+    transition: all 0.3s ease;
+}
+
+.video-container:hover .play-button {
+    background-color: #e96a00;
+}
+
+.video-container:hover .play-button i {
+    color: white;
+}
+
+/* Ensure video is not too tall on mobile */
+@media (max-width: 991px) {
+    .video-container {
+        max-height: 500px;
+    }
+    
+    .play-button {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .play-button i {
+        font-size: 24px;
+    }
+}
 
 .button-catal{
     display: inline-block;
